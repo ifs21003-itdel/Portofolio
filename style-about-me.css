@@ -135,10 +135,6 @@ body{
     width: 150px;
     transition: .5s ease-in;
 }
-.introduction div button a{
-    text-decoration: none;
-    color: #FFF;
-}
 .introduction div button:hover{
     transform: scale(1.2);
     background-color: rgba(85, 153, 248, 0.8);
