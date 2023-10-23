@@ -1,0 +1,627 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    position: relative;
+    margin: 0 auto;
+    /* overflow-x: hidden; */
+}
+#main .active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+
+
+
+/* HEADER */
+header{
+    position: sticky;
+    justify-content: space-between;
+    top: 0px;
+    height: 100px;
+    width: 100%;
+    z-index: 5;
+    font-family: "Poppins";
+}
+nav label{
+    margin-left: 20px;
+    font-size: 50px;
+}
+nav label a{
+    font-family: "Poppins";
+    text-decoration: none;
+    background: linear-gradient( to right, #FFF 50%, #FF5858 50%, #CC2E5D);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .5s ease-out;
+}
+nav label a:hover{
+    background-position: -100%;
+}
+.first-ul{
+    right: 20px;
+    position: relative;
+    float: right;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+.first-ul li{
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 50px;
+}
+.first-ul li a{
+    display: flex;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: .3s;
+}
+.first-ul li a:hover{
+    transform: scale(1.3);
+}
+.second-ul{
+    display: none;
+}
+.hamburger{
+    display: none;
+    top: 0px;
+    float: right;
+    cursor: pointer;
+}
+@media(max-width:1165px){
+    header{
+        display: flex;
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+    .hamburger{
+        width: 10%;
+        height: 10%;
+        margin-top: 2%;
+        margin-right: 2%;
+        display: inline-block;
+        background-color: transparent;
+        border: 0px;
+    }
+    .first-ul{
+        display: none;
+    }
+    .second-ul{
+        position: fixed;
+        top: 70px;
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(47, 46, 46, 0.551);
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+        z-index: 2;
+        transform: translateX(-150%);
+        opacity: 0;
+        transition: .3s all ease;
+    }
+    .ul-active{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .second-ul li{
+        margin: 20px 0px 20px 0px;
+        list-style: none;
+        align-self: center;
+    }
+    .second-ul li a{
+        display: flex;
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        transition: .3s;
+    }
+    .second-ul li a:hover{
+        transform: scale(1.3);
+    }
+}
+
+
+
+
+main{
+    width: 100%;
+}
+
+/* HOME SECTION */
+#home{
+    font-family: "Poppins";
+    position: relative;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+}
+#home .home-desc{
+    padding-top: 30%;
+    color: #FFF;
+    align-items: start;
+}
+#home .home-photo{
+    clip-path: circle();
+}
+#home .home-desc span:nth-child(1){
+    font-size: 20px;
+    font-weight: bolder;
+    color: red;
+}
+#home .home-desc span:nth-child(3){
+    font-weight: 1000;
+    font-size: 50px;
+}
+#home .home-desc button{
+    letter-spacing: 3px;
+    font-weight: lighter;
+    color: #FFF;
+    border: 0px solid ;
+    border-radius: 20px;
+    background-color:  rgba(163, 43, 43, 0.8);
+    margin-top: 30px;
+    font-size: 1.1em;
+    font-family: "Poppins";
+    padding: 20px 10px 20px 10px;
+    width: 150px;
+    transition: .3s ease-in;
+}
+#home .home-desc button:hover{
+    transform: scale(1.2);
+    background-color: rgba(226, 57, 57, 0.8);
+}
+
+
+
+
+
+/* PORTFOLIO SECTION */
+#portfolio{
+    z-index: 3;
+    color: #FFF;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    margin: 200px 10% 0% 10%;
+    align-items: center;
+    position: relative;
+}
+
+#portfolio h2{
+    padding: 0;
+    margin-left: -150px;
+    align-self: flex-start;
+    letter-spacing: 5px;
+    font-weight: 900;
+    font-size: 70px;
+    text-align: center;
+}
+#portfolio .title{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 50%;
+}
+#portfolio .title button{
+    color: #FFF;
+    background-color: rgba(163, 43, 43, 0.8);
+    margin-top: 130px;
+    justify-self: center;
+    align-self: center;
+    width: 150px;
+    height: 50px;
+    border: 0;
+    font-family: "Poppins";
+    letter-spacing: 2px;
+    transition: .3s;
+}
+#portfolio .title button:hover{
+    transform: scale(1.1);
+    background-color: rgba(226, 57, 57, 0.8);
+}
+#portfolio h3 {
+    font-size: 30px;
+}
+#portfolio span{
+    align-self: flex-start;
+    margin: -50px 0px 0px 0px;
+}
+#portfolio .port-container{
+    display: grid;
+    grid-template-columns: 350px 350px;
+}
+#portfolio .port-container .port{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    margin: 20px 20px 20px 20px;
+    padding: 10px;
+    transition: .3s;
+}
+#portfolio .port-container .port:hover{
+    z-index: 3;
+    background-color: rgba(226, 57, 57, 0.8);
+    transform: scale(1.1);
+}
+#portfolio .port-container .port:hover button{
+    color: rgba(50, 50, 50, 0.8);
+}
+#portfolio .port-container .port:hover .doc{
+    background-color: transparent;
+}
+#portfolio .doc {
+    background-color: rgba(74, 74, 74, 0.8);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: 0s;
+}
+#portfolio .doc img{
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.865), 
+                0px 25px 20px -20px rgba(0, 0, 0, 0.865),
+                25px 0px 20px -20px rgba(0, 0, 0, 0.865),
+                -25px 0px 20px -20px rgba(0, 0, 0, 0.865);
+}
+#portfolio .desc{
+    align-self: flex-start;
+    margin-left: 20px;
+    font-weight: 900;
+}
+#portfolio .desc button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(226, 57, 57, 0.8);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+.popup-sochat, .popup-timeTable, .popup-del, .popup-olis{
+    padding: 20px;
+    margin: 20px auto;
+    position: absolute;
+    width: 400px;
+    height: auto;
+    background-color: rgb(88, 89, 88);
+    z-index: 3;
+    display: block;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 1s all ease;
+    transform: translateY(-350px) translateX(-100px);
+}
+.popup-active{
+    transform: translateY(0px) translateX(-100px);
+    opacity: 1;
+}
+
+
+
+
+
+/* SKILL SECTION */
+#skill{
+    color: #FFF;
+    font-family: "Poppins";
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10% 5% 10%;
+    padding-top: 200px;
+    align-items: center;
+    z-index: 1;
+}
+
+#skill h2{
+    font-size: 70px;
+    text-align: center;
+    z-index: 1;
+}
+
+.skill-container{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-gap: 25px;
+    z-index: 1;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+.skill-active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.languange-container{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+.languange-active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#skill .skill-container .skill-content{
+    background-color: rgba(91, 91, 91, 0.536);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    transition: .5s;
+    z-index: 1;
+}
+#skill .skill-container .skill-content:hover{
+    transform: scale(1.1);
+    background-color: #FF5858;
+    z-index: 1;
+}
+#skill .skill-container .skill-content:hover a{
+    color: rgba(88, 88, 88, 0.8);
+    z-index: 1;
+}
+#skill .skill-container .skill-content img{
+    width: 90px;
+    height: 90px;
+    z-index: 1;
+}
+#skill .skill-container .skill-content a{
+    text-decoration: none;
+    color: rgba(226, 57, 57, 0.8);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    z-index: 1;
+}
+#skill label{
+    margin-top: 20px;
+    display: flex;
+    align-self: flex-start;
+    font-size: 40px;
+    font-weight: 100;
+    width: 700px;
+    z-index: 1;
+}
+#skill .bar1, #skill .bar2, #skill .bar3, #skill .bar4{
+    font-size: 20px;
+    display: inline;
+    z-index: 1;
+}
+#skill  .bar1 .child, #skill  .bar2 .child, #skill  .bar3 .child, #skill  .bar4 .child{
+    border-radius: 10px;
+    background-color: #a3a3a3;
+    width: 100%;
+    z-index: 1;
+}
+#skill  .bar1 .child div{
+    display: flex;
+    justify-content: center;
+    width: 98.5%;
+    border-radius: 10px;
+    background-color: #CC2E5D;
+    z-index: 1;
+}
+#skill  .bar2 .child div{
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    border-radius: 10px;
+    background-color: #CC2E5D;
+    z-index: 1;
+}
+#skill  .bar3 .child div{
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    border-radius: 10px;
+    background-color: #CC2E5D;
+    z-index: 1;
+}
+#skill  .bar4 .child div{
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    border-radius: 10px;
+    background-color: #CC2E5D;
+    z-index: 1;
+}
+
+
+
+/* CONTACT */
+#contact{
+    z-index: 2;
+    margin-bottom: 100px;
+    font-family: "Poppins";
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #FFF;
+}
+
+#contact h2{
+    z-index: 2;
+    font-size: 70px;
+    text-align: center;
+}
+#contact p{
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(226, 57, 57, 0.8);
+}
+#contact p span{
+    text-transform: none;
+    font-weight: 100;
+    color: white;
+    font-size: 18px;
+}
+#contact fieldset{
+    display: flex;
+    width: 500px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#contact fieldset input, #contact fieldset textarea{
+    color: #FFF;
+    padding: 10px;
+    width: 500px;
+    border: 0px;
+    border-radius: 10px;
+    max-width: 500px;
+    min-width: 500px;
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+#contact fieldset button{
+    background-color: rgba(163, 43, 43, 0.8);
+    margin: 20px 0px 20px 0px;
+    justify-self: center;
+    align-self: center;
+    width: 150px;
+    height: 50px;
+    border: 0;
+    font-family: "Poppins";
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+#contact fieldset button:hover{
+    transform: scale(1.2);
+    background-color: #FF5858;
+}
+
+#contact fieldset button:active{
+    transform: scale(.9);
+    background-color: #FF5858;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+
+/* POP UP */
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    padding: 50px;
+    display: block;
+    opacity: 0;
+    transition: .5s;
+}
+
+
+
+
+
+/* FOOTER */
+footer{
+    color: #FFF;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer p{
+    display: block;
+    font-family: "Poppins";
+    font-size: 20px;
+    margin: 20px auto 20px auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+footer .social-media{
+    position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+footer .contact-link{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer .social-media .icon{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact-link .icon {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .icon .socmed-icon{
+    margin: 1vw;
+    transition: .3s;
+}
+
+footer .icon .socmed-icon:hover{
+    transform: scale(1.3);
+}
+
+footer .icon img{
+    padding: 15px;
+    clip-path: circle();
+    width: 50px;
+    height: 50px;
+}
+
+

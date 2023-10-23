@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Benhard Yudha</title>
+    <style>
+        #skill .decoration{
+            position: absolute;
+            width: 90%;
+            height: 80%;
+            background-color: rgba(47, 46, 46, 0.3);
+            z-index: -1;
+            align-self: flex-start;
+            margin-left: -70px;
+            margin-top: -100px;
+        }
+        #portfolio .decoration{
+            position: absolute;
+            width: 160%;
+            height: 50%;
+            background-color: rgba(47, 46, 46, 0.3);
+            z-index: -1;
+            align-self: flex-end;
+            margin-right: -70px;
+            margin-top: 300px;
+        }
+        
+    </style>
+</head>
+    <body>
+        <header>
+            <nav>
+                <label><a href="#home">My Portfolio</a></label>
+                <ul class="first-ul">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about-me.html">About Me</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="hamburger" onclick="return openNavBar()">
+                    <img src="assets/icons/icons8-menu-100.png" alt="" width="50px" height="50px">
+                </button>
+                <ul class="second-ul">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about-me.html">About Me</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <div class="home-photo">
+                    <img src="assets/img/diriku_removedBG.png" alt="" width="500px" height="auto">
+                </div>
+                <div class="home-desc">
+                    <span>Hello I'm Benhard Yudha</span>
+                    <br>
+                    <span>Informatics Student</span>
+                    <br>
+                    <p>a student who is enthusiastic in the field of informatics</p>
+                    <button>About Me</button>
+                </div>
+            </section>
+            
+
+            <section id="skill" class="">
+                <div class="decoration"></div>
+                <h2>Skill</h2>
+                <div class="skill-container">
+                    <div class="skill-content">
+                        <img src="assets/icons/code.png" alt="">
+                        <h3>Web Page</h3>
+                        <p>
+                            I master how to build a structured and clear website appearance
+                        </p>
+                        <a href="https://www.freecodecamp.org/news/the-practical-guide-to-becoming-a-professional-web-developer-2f255bc25c90/" target="_blank">Know More &#8594;</a>
+                    </div>
+                    <div class="skill-content">
+                        <img src="assets/icons/BackEnd.png" alt="">
+                        <h3>Object Oriented Programming</h3>
+                        <p>
+                            I master several programming languages that can be said to be object-oriented 
+                        </p><a href="https://www.codecademy.com/resources/blog/object-oriented-programming/" target="_blank">Know More &#8594;</a>
+                    </div>
+                    <div class="skill-content">
+                        <img src="assets/icons/UI.png" alt="">
+                        <h3>Project management</h3>
+                        <p>I understand how to manage a project working in a team to achieve an agreed target or goal</p>
+                        <a href="https://www.codecademy.com/resources/blog/how-to-become-a-project-manager-at-a-tech-company/" target="_blank">Know More &#8594;</a>
+                    </div>
+                </div>
+                <div class="languange-container">
+                    <label>Languange Ability</label>
+                    <div class="bar1">
+                        <p>Indonesian</p>
+                        <div class="child">
+                            <div>
+                                98.5%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar2">
+                        <p>English</p>
+                        <div class="child">
+                            <div>
+                                65%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar3">
+                        <p>Sundanese</p>
+                        <div class="child">
+                            <div>
+                                85%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar4">
+                        <p>Bataknese</p>
+                        <div class="child">
+                            <div>
+                                10%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </section>
+
+           <section id="portfolio">
+            <div class="decoration"></div>
+            <div class="title">
+                <h2>Portfolio</h2>
+                <!-- <button>View All</button> -->
+                <div></div>
+                <span>Contain Project that i've build while i'm still student College</span>
+            </div>
+            <div class="port-container">
+                <div class="port">
+                    <div class="doc">
+                        <img src="assets/img/socket_chattingApp.png" alt="" width="250px">
+                    </div>
+                    <div class="desc">
+                        <p>Sochat Application</p>
+                        <button onclick="setSochat()">Know More &#8594;</button>
+                        <div class="popup-sochat">
+                            <p>
+                                SoChat is a simple communication application between users 
+                                individually or in a group. This application is based on 
+                                Client/Server Socket Programming which uses the Java programming 
+                                language and applies the TCP communication protocol for private 
+                                communication and the UDP communication protocol for group communication.
+                                 This application uses a database to store user account data.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="port">
+                    <div class="doc">
+                        <img src="assets/img/TimeTable.png" alt="" width="250px">
+                    </div>
+                    <div class="desc">
+                        <p>TimeTable Application</p>
+                        <button onclick="setTimetable()">Know More &#8594;</button>
+                        <div class="popup-timeTable">
+                            <p>
+                                Timetable is a simple application created using the Java programming 
+                                language which is intended to fulfill the project assignments for 
+                                the object-based programming course. This application is also combined 
+                                with a SQL database using RDBMS Mariadb. Application creation was carried 
+                                out using the Netbeans IDE.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="port">
+                    <div class="doc">
+                        <img src="assets/img/desainWebsiteDel.png" alt="" width="250px">
+                    </div>
+                    <div class="desc">
+                        <p>ITDel Website Design</p>
+                        <button onclick="setDel()">Know More &#8594;</button>
+                        <div class="popup-del">
+                            <p>
+                                IT Del web design is a design improvement on the IT Del web which aims 
+                                to fulfill assignments in human computer interaction courses. This web 
+                                design was created by paying attention to good UI components
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="port">
+                    <div class="doc">
+                        <img src="assets/img/desainWebsiteOLIS.png" alt="" width="250px">
+                    </div>
+                    <div class="desc">
+                        <p>OLIS Website Design</p>
+                        <button onclick="setOlis()">Know More &#8594;</button>
+                        <div class="popup-olis">
+                            <p>
+                                OLIS web design is a design improvement on the IT Del library web which 
+                                aims to fulfill assignments in the human computer interaction course. 
+                                This web design was created by paying attention to good UI components
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section> 
+
+       
+
+           <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                <strong>Let's work together on your next project</strong>
+                <br>
+                <span>Feel free to contact me</span>
+            </p>
+            <div class="message">
+                <fieldset>
+                    <legend><img src="assets/icons/icons8-email-64.png" alt="mail_icon"></legend>
+                     <form method="post" onsubmit="return validation()">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" placeholder="Your Name" id="name">
+                        <label for="Email">Email</label>
+                        <input type="email" name="Email" placeholder="Your Email" id="email">
+                        <label for="text_message">Feel free to send me a message</label>
+                        <textarea name="text_message" placeholder="Please type something!" id="text-message"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </fieldset>
+                </div>
+            </section>
+        </main>
+
+       
+
+        <footer>
+                <div class="social-media">
+                    <h3>Follow Me</h3>
+                    <div class="icon">
+                        <div class="socmed-icon"><a href="https://www.instagram.com/bnhrdydh/" target="_blank"><img src="assets/icons/icons8-instagram-100.png" alt="" style="background-color: rgba(118, 118, 118, 0.522);"></a></div>
+                        <div class="socmed-icon"><a href="https://www.facebook.com/benhard.yudha/" target="_blank"><img src="assets/icons/icons8-facebook-100.png" alt="" style="background-color: rgba(118, 118, 118, 0.522);"></a></div>
+                        <div class="socmed-icon"><a href="https://www.tiktok.com/@bekljhh" target="_blank"><img src="assets/icons/icons8-tiktok-100.png" alt="" style="background-color: rgba(118, 118, 118, 0.522);"></a></div>
+                        <div class="socmed-icon"><a href="https://www.linkedin.com/in/benhard-yudha-2a63b7239/" target="_blank"><img src="assets/icons/icons8-linkedin-100.png" alt="" style="background-color: rgba(118, 118, 118, 0.522);"></a></div>
+                    </div>
+                </div>
+                <div class="contact-link">
+                    <h3>Contact Me</h3>
+                    <div class="icon">
+                        <div class="socmed-icon"><a href="https://wa.me/6282119394429" target="_blank"><img src="assets/icons/icons8-whatsapp-100.png" alt="" style="background-color: rgba(118, 118, 118, 0.522);"></a></div>
+                        <div class="socmed-icon"><a href="https://t.me/Bamba100100" target="_blank"><img src="assets/icons/icons8-telegram-100.png" alt="" style="background-color: rgba(118, 118, 118, 0.522);"></a></div>
+                    </div>
+                </div>
+                <p>Copyright &copy; 2024 oleh Benhard Yudha.</p>
+        </footer>
+    </body>
+</html>
+

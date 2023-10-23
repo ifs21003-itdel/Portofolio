@@ -1,0 +1,238 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    position: relative;
+    margin: 0 auto;
+    /* overflow-x: hidden; */
+}
+
+.to-main-page{
+    margin-top: 20px;
+    font-family: "Poppins";
+    place-items: left;
+    width: 100%;
+    z-index: 2;
+}
+.to-main-page a{
+    display: flex;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 30px;
+    transition: .3s ease-in;
+}
+.to-main-page a:hover{
+    color: rgba(226, 57, 57, 0.8);
+}
+/* ABOUT ME SECTION */
+#about-me{
+    font-family: "Poppins";
+    padding-top: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0% 0% 0%;
+}
+#about-me::before{
+    content: "";
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    background-image: url("assets/img/aku.jpg");
+    background-size: cover;
+    filter: blur(5px) contrast(90%);
+}
+#about-me h2{
+    color: #FFF;
+    position: relative;
+    font-size: 70px;
+    text-align: center;
+}
+
+#about-me .container{
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#about-me .container img{
+    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+}
+#about-me .container .deskripsi-diri{
+    width: 90vh;
+}
+#about-me .container .data-diri{
+    text-align: center;
+    margin: 50px 10% 0% 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#about-me .container .data-diri 
+.hobi , .alamat, .ulang-tahun{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px 0px 20px;
+}
+#about-me .container figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.introduction{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.introduction img{
+    height: 25%;
+    width: 25%;
+    clip-path: circle();
+}
+.introduction .intro {
+    display: flex;
+    flex-direction: column;
+}
+.introduction div p{
+    color: #FFF;
+    position: relative;
+    font-size: 2em;
+    margin-left: 40px;
+    font-family: "Poppins";
+}
+.introduction div button{
+    color: #FFF;
+    border: 5px solid ;
+    border-radius: 20px;
+    background-color: rgba(111, 217, 255,.2);
+    margin-left: 40px;
+    font-size: 1.2em;
+    font-family: "Poppins";
+    padding: 20px 10px 20px 10px;
+    width: 150px;
+    transition: .5s ease-in;
+}
+.introduction div button:hover{
+    transform: scale(1.2);
+    background-color: rgba(85, 153, 248, 0.8);
+}
+.introduction div .button-intro{
+    display: flex;
+    font-family: "Poppins";
+}
+
+
+
+
+/* CERTIFICATE SECTION */
+#certificate{
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+#certificate h2{
+    text-transform: uppercase;
+    align-self: center;
+}
+#certificate .container{
+    left: -15px;
+    position: relative;
+    place-items: center;
+}
+#certificate .container::after{
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 100%;
+    background-color: rgba(226, 57, 57, 0.8);
+}
+#certificate ul{
+    list-style: none;
+}
+#certificate ul li{
+    margin: 20px 0px 20px 0px;
+    width: 50%;
+    padding: 20px 0px 20px 0px;
+    height: auto;
+}
+#certificate ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(50px);
+}
+#certificate ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-50px);
+    text-align: right;
+}
+
+#certificate ul li a{
+    display: flex;
+    font-size: 30px;
+    color: #FFF;
+    text-decoration: none;
+    transition: .3s;
+}
+#certificate ul li a:hover{
+    transform: scale(1.1);
+    color: rgba(226, 57, 57, 0.8);
+}
+
+
+#certificate ul li .circle{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(226, 57, 57, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+}
+#certificate ul li .circle::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: rgba(226, 57, 57, 0.464);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#certificate ul li:nth-child(odd) .circle{
+    right: -52.5px;
+    top: 60px;
+    transform: translate(50%, -50%);
+}
+#certificate ul li:nth-child(even) .circle{
+    left: -47.5px;
+    top: 60px;
+    transform: translate(-50%, -50%);
+}
