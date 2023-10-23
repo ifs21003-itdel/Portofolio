@@ -186,6 +186,10 @@ main{
     width: 150px;
     transition: .3s ease-in;
 }
+#home .home-desc button a{
+    text-decoration: none;
+    color: #FFF;
+}
 #home .home-desc button:hover{
     transform: scale(1.2);
     background-color: rgba(226, 57, 57, 0.8);
