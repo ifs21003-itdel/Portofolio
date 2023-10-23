@@ -125,7 +125,6 @@ body{
     font-family: "Poppins";
 }
 .introduction div button{
-    color: #FFF;
     border: 5px solid ;
     border-radius: 20px;
     background-color: rgba(111, 217, 255,.2);
@@ -135,6 +134,10 @@ body{
     padding: 20px 10px 20px 10px;
     width: 150px;
     transition: .5s ease-in;
+}
+.introduction div button a{
+    text-decoration: none;
+    color: #FFF;
 }
 .introduction div button:hover{
     transform: scale(1.2);
