@@ -8,10 +8,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1000px;
+    width: 1200px;
     height: auto;
     margin: 0px;
-    padding: 0px;
+    padding: 0px 20px 0px 20px;
     overflow: auto;
     position: relative;
     margin: 0 auto;
@@ -162,6 +162,11 @@ main{
 }
 #home .home-photo{
     clip-path: circle();
+    background-image: url("assets/img/anyar.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 500px; 
+    height: 500px;
 }
 #home .home-desc span:nth-child(1){
     font-size: 20px;
@@ -172,29 +177,41 @@ main{
     font-weight: 1000;
     font-size: 50px;
 }
+#home .home-desc p{
+    text-align: justify;
+}
 #home .home-desc button{
-    letter-spacing: 3px;
-    font-weight: lighter;
-    color: #FFF;
+    display: flex;
     border: 0px solid ;
     border-radius: 20px;
     background-color:  rgba(163, 43, 43, 0.8);
     margin-top: 30px;
     font-size: 1.1em;
     font-family: "Poppins";
-    padding: 20px 10px 20px 10px;
-    width: 150px;
+    padding: 20px 30px 20px 30px;
+    width: fit-content;
     transition: .3s ease-in;
 }
 #home .home-desc button a{
-    text-decoration: none;
     color: #FFF;
+    font-size: 1.1em;
+    font-family: "Poppins";
+    text-decoration: none;
+    transition: 0.3s;
 }
 #home .home-desc button:hover{
-    transform: scale(1.2);
-    background-color: rgba(226, 57, 57, 0.8);
+    transform: scale(1.1);
+    transition: .3s ease-in;
 }
-
+#home .home-desc button:hover a{
+    /* font-size: larger; */
+    text-shadow:
+        0 0 4px rgba(0, 191, 255, 0.8),
+        0 0 8px rgba(0, 191, 255, 0.8),
+        0 0 12px rgba(0, 191, 255, 0.8),
+        0 0 16px rgba(0, 191, 255, 0.6);
+    transition: 0.3s;
+}
 
 
 
@@ -207,59 +224,28 @@ main{
     display: flex;
     flex-direction: column;
     margin: 200px 10% 0% 10%;
-    align-items: center;
     position: relative;
 }
 
 #portfolio h2{
-    padding: 0;
-    margin-left: -150px;
-    align-self: flex-start;
     letter-spacing: 5px;
     font-weight: 900;
     font-size: 70px;
-    text-align: center;
 }
-#portfolio .title{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 60% 50%;
-}
-#portfolio .title button{
-    color: #FFF;
-    background-color: rgba(163, 43, 43, 0.8);
-    margin-top: 130px;
-    justify-self: center;
-    align-self: center;
-    width: 150px;
-    height: 50px;
-    border: 0;
-    font-family: "Poppins";
-    letter-spacing: 2px;
-    transition: .3s;
-}
-#portfolio .title button:hover{
-    transform: scale(1.1);
-    background-color: rgba(226, 57, 57, 0.8);
-}
-#portfolio h3 {
-    font-size: 30px;
-}
+
 #portfolio span{
     align-self: flex-start;
-    margin: -50px 0px 0px 0px;
+    /* margin: -50px 0px 0px 0px; */
+    font-size: 30px;
 }
 #portfolio .port-container{
-    display: grid;
-    grid-template-columns: 350px 350px;
+    display: flex;
+    flex-direction: column;
 }
 #portfolio .port-container .port{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     background-color: transparent;
-    margin: 20px 20px 20px 20px;
+    margin: 20px;
     padding: 10px;
     transition: .3s;
 }
@@ -268,17 +254,13 @@ main{
     background-color: rgba(226, 57, 57, 0.8);
     transform: scale(1.1);
 }
-#portfolio .port-container .port:hover button{
-    color: rgba(50, 50, 50, 0.8);
-}
 #portfolio .port-container .port:hover .doc{
     background-color: transparent;
 }
 #portfolio .doc {
     background-color: rgba(74, 74, 74, 0.8);
     display: flex;
-    width: 100%;
-    height: 100%;
+
     padding: 20px;
     justify-content: center;
     align-items: center;
@@ -295,36 +277,39 @@ main{
     margin-left: 20px;
     font-weight: 900;
 }
-#portfolio .desc button{
-    cursor: pointer;
+#portfolio .desc > p{
+    font-size: 2rem;
+}
+#portfolio .desc .paragraph{
+    text-align: justify;
+}
+#portfolio .desc .view{
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
-    border: 0;
-    text-transform: uppercase;
+    padding: 10px;
+    width: fit-content;
+}
+#portfolio .desc .view a{
+    color: #FFF;
+    font-weight: 900;
+    font-family: "Poppins";
     text-decoration: none;
-    color: rgba(226, 57, 57, 0.8);
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 1.5px;
+    transition: 0.3s;
 }
-.popup-sochat, .popup-timeTable, .popup-del, .popup-olis{
-    padding: 20px;
-    margin: 20px auto;
-    position: absolute;
-    width: 400px;
-    height: auto;
-    background-color: rgb(88, 89, 88);
-    z-index: 3;
-    display: block;
-    border-radius: 20px;
-    opacity: 0;
-    transition: 1s all ease;
-    transform: translateY(-350px) translateX(-100px);
+#portfolio .desc .view:hover a{
+    font-size: larger;
+    text-shadow:
+        0 0 4px rgba(0, 191, 255, 0.8),
+        0 0 8px rgba(0, 191, 255, 0.8),
+        0 0 12px rgba(0, 191, 255, 0.8),
+        0 0 16px rgba(0, 191, 255, 0.6);
+    transition: 0.3s;
 }
-.popup-active{
-    transform: translateY(0px) translateX(-100px);
-    opacity: 1;
+#portfolio .desc .view:hover a span{
+    margin-left: 10px;
+    transition: 0.3s;
 }
-
 
 
 
@@ -381,7 +366,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     transition: .5s;
     z-index: 1;
 }
@@ -405,6 +390,9 @@ main{
     font-weight: 700;
     letter-spacing: 1.5px;
     z-index: 1;
+}
+#skill .skill-container .skill-content p{
+    text-align: justify;
 }
 #skill label{
     margin-top: 20px;
