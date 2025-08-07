@@ -120,7 +120,8 @@ function setOlis(){
 
 function reveal() {
     var skills = document.querySelectorAll(".skill-container");
-    var languange = document.querySelectorAll(".languange-container"); 
+    var languange = document.querySelectorAll(".languange-container");
+    var portfolio = document.querySelectorAll(".port-container"); 
     
     skills.forEach(function (skill) {
         var windowHeight = window.innerHeight;
@@ -151,7 +152,23 @@ function reveal() {
             lang.classList.remove("languange-active"); 
         }
     });
+
+    portfolio.forEach(function (portfolio) {
+        var windowHeight = window.innerHeight;
+        console.log (windowHeight);
+        var elementTop = portfolio.getBoundingClientRect().top;
+        console.log (elementTop);
+        var elementVisible = document.getElementById("skill").getBoundingClientRect().bottom;
+        console.log(elementVisible)
+
+        if (elementTop < windowHeight - elementVisible) {
+            portfolio.classList.add("port-active");
+        } else {
+            portfolio.classList.remove("port-active"); 
+        }
+    });
 }
+
 
 window.addEventListener("scroll", reveal);
 reveal();

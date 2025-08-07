@@ -238,10 +238,18 @@ main{
     /* margin: -50px 0px 0px 0px; */
     font-size: 30px;
 }
-#portfolio .port-container{
+.port-container{
     display: flex;
     flex-direction: column;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1s all ease;
 }
+.port-active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 #portfolio .port-container .port{
     display: flex;
     background-color: transparent;
